@@ -16,14 +16,23 @@ public class BaseBallTeam {
         this.lose = lose;
         this.draw = draw;
     }
+
+    //ちゃんとGetterSetterできてるかのテスト用メソッド
+    public void announce() {
+        System.out.println(name + "の勝ち数は" + win + "、負け数は" + lose + "、引き分け数は" + draw);
+    }
     //doubleで返す勝率計算メソッド
-    public double getRate() {
+    public double getRate(int win, int lose) {
+        double rate = ((double)win/(win + lose));
+        return rate;
 
     }
     //球団の成績表示メソッド
-    public String report() {
-
-    }
+    /*public void report(BaseBallTeam //, double rate
+            ) {
+        System.out.println(name + " の2022年の成績は " + win + "勝 " + lose + "敗 " + draw + "分、勝率は " +// rate +
+    "です。");
+    }*/
 
     //getterとsetter
     public String getName() {
